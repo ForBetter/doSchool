@@ -1,0 +1,49 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/viewPerson"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/viewPersonHeight" >
+
+    <RelativeLayout
+        android:id="@+id/viewPersonNickLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/viewPersonLayoutHeight"
+        android:background="@drawable/image_head_menu" >
+
+        <TextView
+            android:id="@+id/viewPersonNickTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:gravity="center" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/viewPersonOperateLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/viewPersonOperateLayoutHeight"
+        android:layout_below="@id/viewPersonNickLayout"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/viewPersonCardBtn"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginLeft="@dimen/viewPersonCardBtnMarginLeft"
+            android:layout_marginRight="@dimen/viewPersonCardBtnMarginRight"
+            android:background="@drawable/ic_btn" />
+    </LinearLayout>
+
+    <us.dobell.xtools.XImageView
+        android:id="@+id/viewPersonHeadXimg"
+        android:layout_width="@dimen/viewPersonHeadXimgSize"
+        android:layout_height="@dimen/viewPersonHeadXimgSize"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="@dimen/viewPersonHeadXimgMarginLeft"
+        android:layout_marginTop="@dimen/viewPersonHeadXimgMarginTop"
+        android:src="@drawable/image_ximg_head" />
+
+</RelativeLayout>

@@ -1,0 +1,54 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/viewXpage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/viewXPageTitle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/viewXPageTitleHeight"
+        android:background="#005092" >
+
+        <ImageButton
+            android:id="@+id/viewXPageTitleLeftBtn"
+            android:layout_width="@dimen/viewXPageTitleBtnWidth"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/image"
+            android:src="@drawable/ic_btn_menu" />
+
+        <ImageButton
+            android:id="@+id/viewXPageTitleRightBtn"
+            android:layout_width="@dimen/viewXPageTitleBtnWidth"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/image" />
+
+        <LinearLayout
+            android:id="@+id/viewXPageTitleMidLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/viewXPageTitleRightBtn"
+            android:layout_toRightOf="@id/viewXPageTitleLeftBtn"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/viewXPageTitleMidTxt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="25sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/viewXpageContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+</LinearLayout>

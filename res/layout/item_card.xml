@@ -1,0 +1,33 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/itemCard"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <us.dobell.xtools.XImageView
+        android:id="@+id/itemCardHeadXimg"
+        android:layout_width="@dimen/itemCardHeadXimgSize"
+        android:src="@drawable/image_ximg_head"
+        android:layout_height="@dimen/itemCardHeadXimgSize"
+        android:layout_gravity="center_vertical" />
+
+    <LinearLayout
+        android:id="@+id/itemCardInfoLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/itemCardNickTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/itemCardIntroduceTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</LinearLayout>

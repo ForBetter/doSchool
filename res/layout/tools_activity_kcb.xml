@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tool_kcb_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+	
+    <include
+        android:id="@+id/tools_activity_kcb_top"
+        layout="@layout/tools_top" />
+
+    <android.support.v7.widget.GridLayout
+        android:id="@+id/tool_kcb_gridlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </android.support.v7.widget.GridLayout>
+
+</LinearLayout>

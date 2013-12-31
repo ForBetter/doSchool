@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/itemApply"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <us.dobell.xtools.XImageView
+        android:id="@+id/itemApplyUsrHeadXimg"
+        android:layout_width="@dimen/itemApplyHeadXimgSize"
+        android:layout_height="@dimen/itemApplyHeadXimgSize"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/image_ximg_head" />
+
+    <TextView
+        android:id="@+id/itemApplyUsrNickTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/itemApplyUsrHeadXimg" />
+
+    <TextView
+        android:id="@+id/itemApplyTimeTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/itemApplyUsrNickTxt"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true" />
+
+    <TextView
+        android:id="@+id/itemApplyReasonTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/itemApplyUsrNickTxt"
+        android:layout_toRightOf="@id/itemApplyUsrHeadXimg" />
+
+    <LinearLayout
+        android:id="@+id/itemApplyOperateLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/itemApplyReasonTxt"
+        android:layout_toRightOf="@id/itemApplyUsrHeadXimg"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/itemApplyOperateNegativeBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:text="@string/itemApplyOperateNegativeBtn" />
+
+        <Button
+            android:id="@+id/itemApplyOperatePositiveBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:text="@string/itemApplyOperatePositiveBtn" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/tools_cjcx_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/viewXPageTitleHeight" >
+
+        <Button
+            android:id="@+id/tools_cjcx_leftbt"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true" />
+
+        <Button
+            android:id="@+id/tools_cjcx_rightbt"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+    <ListView
+       	android:id="@+id/tools_cjcx_list"
+        android:layout_below="@+id/tools_cjcx_top"
+        android:layout_above="@+id/tools_cjcx_include"
+        android:dividerHeight="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </ListView>
+	<include 
+		android:id="@+id/tools_cjcx_include"  
+	 	android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+	    android:layout_alignParentBottom="true"
+	    layout="@layout/tools_cjcx_morebt"/>
+
+</RelativeLayout>

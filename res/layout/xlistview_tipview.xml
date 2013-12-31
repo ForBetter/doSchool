@@ -1,0 +1,34 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tipViewXListView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="horizontal" >
+
+    <ViewSwitcher
+        android:id="@+id/tipSwitcher"
+        android:layout_width="32dp"
+        android:layout_height="32dp" >
+
+        <ImageView
+            android:id="@+id/tipArrow"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:contentDescription="@string/image"
+            android:src="@drawable/ic_xlist_arrow" />
+
+        <ProgressBar
+            android:id="@+id/tipProgress"
+            style="@android:style/Widget.ProgressBar.Small"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:padding="8dp" />
+    </ViewSwitcher>
+
+    <TextView
+        android:id="@+id/tipTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal" />
+
+</LinearLayout>

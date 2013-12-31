@@ -1,0 +1,167 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pageShowCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:id="@+id/pageShowCardLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <us.dobell.xtools.XImageView
+            android:id="@+id/pageShowCardHeadXImg"
+            android:layout_width="@dimen/pageShowCardHeadXimgSize"
+            android:layout_height="@dimen/pageShowCardHeadXimgSize"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/image_ximg_head" />
+
+        <LinearLayout
+            android:id="@+id/pageShowCardNameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/pageShowCardNameLabelTxt"
+                android:layout_width="70dp"
+                android:layout_height="36dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/btn_pressed"
+                android:gravity="center"
+                android:text="@string/pageShowCardNameLabelTxt"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/pageShowCardNameTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/pageShowCardNickLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/pageShowCardNickLabelTxt"
+                android:layout_width="70dp"
+                android:layout_height="36dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/btn_pressed"
+                android:gravity="center"
+                android:text="@string/pageShowCardNickLabelTxt"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/pageShowCardNickTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/pageShowCardPhoneLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/pageShowCardPhoneLabelTxt"
+                android:layout_width="70dp"
+                android:layout_height="36dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/btn_pressed"
+                android:gravity="center"
+                android:text="@string/pageShowCardPhoneLabelTxt"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/pageShowCardPhoneTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/pageShowCardQqLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/cardShowQqLabelTxt"
+                android:layout_width="70dp"
+                android:layout_height="36dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/btn_pressed"
+                android:gravity="center"
+                android:text="@string/pageShowCardQqLabelTxt"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/pageShowCardQqTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/pageShowCardMailLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/pageShowCardMailLabelTxt"
+                android:layout_width="70dp"
+                android:layout_height="36dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/btn_pressed"
+                android:gravity="center"
+                android:text="@string/pageShowCardMailLabelTxt"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/pageShowCardMailTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autoLink="email"
+                android:gravity="center_vertical" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/pageShowCardIntroduceLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/pageShowCardIntroduceLabelTxt"
+                android:layout_width="70dp"
+                android:layout_height="36dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/btn_pressed"
+                android:gravity="center"
+                android:text="@string/pageShowCardIntroduceLabelTxt"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/pageShowCardIntroduceTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,62 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activityNormalLogin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_login"
+    android:gravity="center" >
+
+    <EditText
+        android:id="@+id/activityNormalLoginFunIdEdtxt"
+        android:layout_width="@dimen/activityNormalLoginFuncIdEdtxtWidth"
+        android:layout_height="@dimen/activityNormalLoginFuncIdEdtxtHeight"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/activityNormalLoginFunIdEdtxtMarginTop"
+        android:background="@drawable/background_inputbox"
+        android:hint="@string/activityNormalLoginFuncIdEdtxt" />
+
+    <EditText
+        android:id="@+id/activityNormalLoginUsrPasswdEdtxt"
+        android:layout_width="@dimen/activityNormalLoginUsrPasswdEdtxtWidth"
+        android:layout_height="@dimen/activityNormalLoginUsrPasswdEdtxtHeight"
+        android:layout_alignLeft="@id/activityNormalLoginFunIdEdtxt"
+        android:layout_alignRight="@id/activityNormalLoginFunIdEdtxt"
+        android:layout_below="@id/activityNormalLoginFunIdEdtxt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/activityNormalLoginUsrPasswdEdtxtMarginTop"
+        android:background="@drawable/background_inputbox"
+        android:hint="@string/activityNormalLoginUsrPasswdEdtxt"
+        android:inputType="textPassword" />
+
+    <LinearLayout
+        android:id="@+id/activityNormalLoginOperationLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/activityNormalLoginOperationLayoutHeight"
+        android:layout_alignLeft="@id/activityNormalLoginFunIdEdtxt"
+        android:layout_alignRight="@id/activityNormalLoginFunIdEdtxt"
+        android:layout_below="@id/activityNormalLoginUsrPasswdEdtxt"
+        android:layout_marginTop="@dimen/activityNormalLoginOperationLayoutMarginTop"
+        android:orientation="horizontal"
+        android:weightSum="10" >
+
+        <Button
+            android:id="@+id/activityNormalLoginRegisterBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:background="@drawable/ic_btn"
+            android:text="@string/activityNormalLoginRegisterBtn"
+            android:textColor="#666666"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/activityNormalLoginLoginBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="6"
+            android:background="@drawable/ic_btn"
+            android:text="@string/activityNormalLoginLoginBtn"
+            android:textColor="#666666"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+</RelativeLayout>

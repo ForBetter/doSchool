@@ -1,0 +1,25 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/viewHeadMenu"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/viewHeadMenuHeight"
+    android:background="@drawable/image_head_menu" >
+
+    <us.dobell.xtools.XImageView
+        android:id="@+id/viewHeadMenuHeadXImg"
+        android:layout_width="@dimen/viewHeadMenuHeadXImgSize"
+        android:layout_height="@dimen/viewHeadMenuHeadXImgSize"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/image_ximg_head"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="@dimen/viewHeadMenuMargin" />
+
+    <TextView
+        android:id="@+id/viewHeadMenuNick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/viewHeadMenuMargin"
+        android:layout_toRightOf="@id/viewHeadMenuHeadXImg"
+        android:textColor="@android:color/white" />
+
+</RelativeLayout>

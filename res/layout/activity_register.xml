@@ -1,0 +1,87 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activityRegister"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/activityRegisterHeadImg"
+        android:layout_width="@dimen/activityRegisterHeadImgSize"
+        android:layout_height="@dimen/activityRegisterHeadImgSize"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/activityRegisterHeadImgMargin"
+        android:contentDescription="@string/image"
+        android:src="@drawable/image_ximg_head" />
+
+    <EditText
+        android:id="@+id/activityRegisterFunIdEdtxt"
+        android:layout_width="@dimen/activityRegisterFunIdEdtxtWidth"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/activityRegisterHeadImg"
+        android:layout_centerHorizontal="true"
+        android:hint="@string/activityRegisterFunIdEdtxt" />
+
+    <EditText
+        android:id="@+id/activityRegisterFunPasswdEdtxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/activityRegisterFunIdEdtxt"
+        android:layout_alignRight="@id/activityRegisterFunIdEdtxt"
+        android:layout_below="@id/activityRegisterFunIdEdtxt"
+        android:hint="@string/activityRegisterFunPasswdEdtxt" />
+
+    <EditText
+        android:id="@+id/activityRegisterNickEdtxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/activityRegisterFunIdEdtxt"
+        android:layout_alignRight="@id/activityRegisterFunIdEdtxt"
+        android:layout_below="@id/activityRegisterFunPasswdEdtxt"
+        android:layout_marginTop="@dimen/activityRegisterNickEdtxtMarginTop"
+        android:hint="@string/activityRegisterNickEdtxt" />
+
+    <EditText
+        android:id="@+id/activityRegisterUsrPasswdEdtxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/activityRegisterFunIdEdtxt"
+        android:layout_alignRight="@id/activityRegisterFunIdEdtxt"
+        android:layout_below="@id/activityRegisterNickEdtxt"
+        android:hint="@string/activityRegisterUsrPasswdEdtxt"
+        android:inputType="textVisiblePassword" />
+
+    <EditText
+        android:id="@+id/activityRegisterUsrPasswdRecheckEdtxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/activityRegisterFunIdEdtxt"
+        android:layout_alignRight="@id/activityRegisterFunIdEdtxt"
+        android:layout_below="@id/activityRegisterUsrPasswdEdtxt"
+        android:hint="@string/activityRegisterUsrPasswdRecheckEdtxt"
+        android:inputType="textVisiblePassword" />
+
+    <LinearLayout
+        android:id="@+id/activityRegisterOperationLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/activityRegisterFunIdEdtxt"
+        android:layout_alignRight="@id/activityRegisterFunIdEdtxt"
+        android:layout_below="@id/activityRegisterUsrPasswdRecheckEdtxt"
+        android:orientation="horizontal"
+        android:weightSum="10" >
+
+        <Button
+            android:id="@+id/activityRegisterBackBtn"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/activityRegisterBtnHeight"
+            android:layout_weight="4"
+            android:background="@drawable/image_bin_back" />
+
+        <Button
+            android:id="@+id/activityRegisterRegisterBtn"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/activityRegisterBtnHeight"
+            android:layout_weight="6"
+            android:background="@drawable/image_btn_register" />
+    </LinearLayout>
+
+</RelativeLayout>

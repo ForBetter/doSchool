@@ -1,0 +1,31 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pageWrite"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <us.dobell.xtools.XEditText
+        android:id="@+id/pageWriteContentEdtxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="top"
+        android:hint="@string/pageWriteContentEdtxt"
+        android:minLines="10" />
+
+    <TextView
+        android:id="@+id/pageWriteTipTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pageWriteContentEdtxt"
+        android:text="@string/pageWriteTipTxt"
+        android:textColor="@android:color/darker_gray" />
+
+    <LinearLayout
+        android:id="@+id/pageWriteImageLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pageWriteTipTxt"
+        android:orientation="horizontal" >
+    </LinearLayout>
+
+</RelativeLayout>

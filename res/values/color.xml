@@ -1,0 +1,9 @@
+<resources>
+
+    <color name="redLight">#fac8c8</color>
+    <color name="redNormal">#dcaaaa</color>
+    <color name="redDark">#be8c8c</color>
+    <color name="blueLight">#c8c8fa</color>
+    <color name="blueNormal">#aaaadc</color>
+    <color name="blueDark">#8c8cbe</color>
+</resources>

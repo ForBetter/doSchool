@@ -1,0 +1,87 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/viewNormalMicroblog"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="horizontal" >
+
+    <us.dobell.xtools.XImageView
+        android:id="@+id/viewNormalMicroblogUserHeadXImg"
+        android:layout_width="@dimen/viewNormalMicroblogUserHeadXImgSize"
+        android:layout_height="@dimen/viewNormalMicroblogUserHeadXImgSize"
+        android:padding="4dp"
+        android:src="@drawable/image_ximg_head" />
+
+    <LinearLayout
+        android:id="@+id/viewNormalMicroblogLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/viewNormalMicroblogInfoLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/viewNormalMicroblogUserNickTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/viewNormalMicroblogTimeTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:gravity="right" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/viewNormalMicroblogContentTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:id="@+id/viewNormalMicroblogImagesLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/viewNormalMicroblogRootLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/viewNormalMicroblogSundriesLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/viewNormalMicroblogCommentBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/viewNormalMicroblogCommentBtnMargin"
+                android:background="@drawable/ic_btn_operation"
+                android:padding="@dimen/viewNormalMicroblogCommentBtnPadding" />
+
+            <Button
+                android:id="@+id/viewNormalMicroblogTransmitBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/viewNormalMicroblogTransmitBtnMargin"
+                android:background="@drawable/ic_btn_operation"
+                android:padding="@dimen/viewNormalMicroblogTransmitBtnPadding" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

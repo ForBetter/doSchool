@@ -1,0 +1,113 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/toolPage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/titleLayout"
+        android:layout_marginTop="10dp" >
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <include
+                layout="@layout/tools_iconbt"
+                android:id="@+id/page_tools_bt1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+            />
+
+            <include
+                layout="@layout/tools_iconbt" 
+                android:layout_weight="1"
+                android:id="@+id/page_tools_bt2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+            />
+            
+            <include
+                layout="@layout/tools_iconbt"
+                android:id="@+id/page_tools_bt3"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+            />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+            
+            
+            <include
+                layout="@layout/tools_iconbt"
+                android:id="@+id/page_tools_bt4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+            />
+
+            <include
+                layout="@layout/tools_iconbt" 
+                android:layout_weight="1"
+                android:id="@+id/page_tools_bt5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+            />
+            
+            <include
+                layout="@layout/tools_iconbt"
+                android:id="@+id/page_tools_bt6"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+            />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+            
+            
+            <include
+                layout="@layout/tools_iconbt"
+                android:id="@+id/page_tools_bt7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+            />
+
+            <include
+                layout="@layout/tools_iconbt" 
+                android:layout_weight="1"
+                android:id="@+id/page_tools_bt8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+            />
+            
+            <include
+                layout="@layout/tools_iconbt"
+                android:id="@+id/page_tools_bt9"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+            />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+        </TableRow>
+    </TableLayout>
+
+</RelativeLayout>

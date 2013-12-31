@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tools_ic_layout"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:layout_height="match_parent" >
+    
+    <ImageView
+        android:id="@+id/tools_ic_image"
+        android:background="@null"
+        android:layout_width="66dp"
+        android:layout_height="66dp" />
+
+    <TextView
+        android:id="@+id/tools_ic_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

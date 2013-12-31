@@ -1,0 +1,48 @@
+<resources>
+
+    <dimen name="viewXPageTitleHeight">42dp</dimen>
+    <dimen name="viewXPageTitleBtnWidth">48dp</dimen>
+    <dimen name="itemMenuNameHeight">64dp</dimen>
+    <dimen name="itemMenuNewsHeight">64dp</dimen>
+    <dimen name="subitemMenuNameHeight">32dp</dimen>
+    <dimen name="subitemMenuNewsHeight">32dp</dimen>
+    <dimen name="activityNormalLoginFuncIdEdtxtWidth">240dp</dimen>
+    <dimen name="activityNormalLoginFuncIdEdtxtHeight">40dp</dimen>
+    <dimen name="activityNormalLoginFunIdEdtxtMarginTop">120dp</dimen>
+    <dimen name="activityNormalLoginUsrPasswdEdtxtWidth">240dp</dimen>
+    <dimen name="activityNormalLoginUsrPasswdEdtxtHeight">40dp</dimen>
+    <dimen name="activityNormalLoginUsrPasswdEdtxtMarginTop">5dp</dimen>
+    <dimen name="activityNormalLoginOperationLayoutMarginTop">20dp</dimen>
+    <dimen name="activityNormalLoginOperationLayoutHeight">48dp</dimen>
+    <dimen name="activityAutoLoginLayoutPaddingBottom">50dp</dimen>
+    <dimen name="activityRegisterHeadImgSize">96dp</dimen>
+    <dimen name="activityRegisterHeadImgMargin">10dp</dimen>
+    <dimen name="activityRegisterFunIdEdtxtWidth">240dp</dimen>
+    <dimen name="activityRegisterNickEdtxtMarginTop">30dp</dimen>
+    <dimen name="activityRegisterBtnHeight">50dp</dimen>
+    <dimen name="pageShowCardHeadXimgSize">90dp</dimen>
+    <dimen name="pageEditCardHeadXimgSize">90dp</dimen>
+    <dimen name="itemUserHeadXimgSize">64dp</dimen>
+    <dimen name="itemCardHeadXimgSize">64dp</dimen>
+    <dimen name="itemApplyHeadXimgSize">64dp</dimen>
+    <dimen name="viewPersonHeight">216dp</dimen>
+    <dimen name="viewPersonLayoutHeight">144dp</dimen>
+    <dimen name="viewPersonOperateLayoutHeight">72dp</dimen>
+    <dimen name="viewPersonCardBtnMarginLeft">160dp</dimen>
+    <dimen name="viewPersonCardBtnMarginRight">50dp</dimen>
+    <dimen name="viewPersonCardBtnWidth">100dp</dimen>
+    <dimen name="viewPersonHeadXimgSize">72dp</dimen>
+    <dimen name="viewPersonHeadXimgMarginLeft">40dp</dimen>
+    <dimen name="viewPersonHeadXimgMarginTop">100dp</dimen>
+    <dimen name="viewNormalMicroblogUserHeadXImgSize">64dp</dimen>
+    <dimen name="viewNormalMicroblogCommentBtnPadding">2dp</dimen>
+    <dimen name="viewNormalMicroblogCommentBtnMargin">2dp</dimen>
+    <dimen name="viewNormalMicroblogTransmitBtnMargin">2dp</dimen>
+    <dimen name="viewNormalMicroblogTransmitBtnPadding">2dp</dimen>
+    <dimen name="viewAtUserHeadXImgSize">64dp</dimen>
+    <dimen name="itemCommentUserHeadXImgSize">64dp</dimen>
+    <dimen name="viewHeadMenuHeight">160dp</dimen>
+    <dimen name="viewHeadMenuHeadXImgSize">64dp</dimen>
+    <dimen name="viewHeadMenuMargin">7dp</dimen>
+
+</resources>

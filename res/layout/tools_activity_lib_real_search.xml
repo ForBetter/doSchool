@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tools_activity_real_search_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+    <EditText 
+        android:id="@+id/tools_activity_real_search_edit"
+      	android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/tools_activity_real_search_bt"
+        
+        />
+    <Button 
+        android:id="@+id/tools_activity_real_search_bt"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+        />
+    
+    <RadioGroup 
+        android:id="@+id/tools_activity_real_search_radiogroup"
+        android:layout_below="@+id/tools_activity_real_search_bt"
+      	android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal"
+        >
+        <RadioButton 
+            android:text="题名"
+            android:textColor="@android:color/background_dark"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"
+            />
+        <RadioButton 
+            android:text="作者"
+            android:textColor="@android:color/background_dark"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+            />
+        <RadioButton 
+            android:text="主题"
+            android:textColor="@android:color/background_dark"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"
+            />
+    </RadioGroup>
+    
+
+</RelativeLayout>

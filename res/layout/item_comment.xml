@@ -1,0 +1,64 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/itemComment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <us.dobell.xtools.XImageView
+        android:id="@+id/itemCommentUserHeadXImg"
+        android:layout_width="@dimen/itemCommentUserHeadXImgSize"
+        android:layout_height="@dimen/itemCommentUserHeadXImgSize"
+        android:src="@drawable/image_ximg_head" />
+
+    <LinearLayout
+        android:id="@+id/itemCommentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/itemCommentInfoLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/itemCommentUserNickTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:singleLine="true" />
+
+            <Button
+                android:id="@+id/itemCommentCommentBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_margin="3dp"
+                android:background="@drawable/ic_btn_operation"
+                android:padding="5dp"
+                android:text="@string/itemCommentCommentBtn" />
+
+            <TextView
+                android:id="@+id/itemCommentTimeTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@id/itemCommentCommentBtn" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/itemCommentContentTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:id="@+id/itemCommentCommentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

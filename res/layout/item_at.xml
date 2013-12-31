@@ -1,0 +1,72 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/itemAt"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <us.dobell.xtools.XImageView
+        android:id="@+id/itemAtUserHeadXImg"
+        android:layout_width="@dimen/viewAtUserHeadXImgSize"
+        android:layout_height="@dimen/viewAtUserHeadXImgSize"
+        android:src="@drawable/image_ximg_head"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" />
+
+    <LinearLayout
+        android:id="@+id/itemAtLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/itemAtUserHeadXImg"
+        android:orientation="vertical"
+        android:weightSum="3" >
+
+        <LinearLayout
+            android:id="@+id/itemAtTitleLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/itemAtUserNickTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/itemAtTimeTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/itemAtNewContentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/itemAtTitleTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/itemAtNewContentTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:id="@+id/itemAtOldContentLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/itemAtOldContentTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
