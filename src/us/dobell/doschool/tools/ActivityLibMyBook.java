@@ -130,7 +130,7 @@ public class ActivityLibMyBook extends Activity{
 						 t2 =(TextView) v.findViewById(R.id.tools_lib_mybook_item_text2);
 				t1.setText(data.get(position).get(0));
 				t1.setTextColor(Color.BLUE);
-				t2.setText("归还日期："+data.get(position).get(4));
+				t2.setText("归还日期： "+data.get(position).get(4));
 				return v;
 				
 			}
