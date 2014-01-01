@@ -2,7 +2,6 @@ package us.dobell.doschool.tools;
 
 import java.util.List;
 
-import us.dobell.doschool.R;
 import android.app.Activity;
 import android.content.Intent;
 import android.database.DataSetObserver;
@@ -15,6 +14,8 @@ import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import us.dobell.doschool.R;
+
 
 public class ActivityLibDetail extends Activity {
 

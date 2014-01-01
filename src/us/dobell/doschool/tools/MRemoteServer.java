@@ -21,6 +21,7 @@ import android.os.Handler;
 import android.util.Log;
 import android.widget.Toast;
 
+
 public class MRemoteServer {
 
 	public static final String TAG = "RemoteServer";
@@ -45,6 +46,43 @@ public class MRemoteServer {
 
 	// return-->[{"title":"\u201c\u9605\u8bfb\u7ecf\u5178\u201d\u7cfb\u5217\u6d3b\u52a8\u7b2c\u5341\u4e03\u573a\u2014\u2014\u4f5c\u5bb6\u4e13\u573a","time":"2013-09-11 09:54:49","link":"\/n\/2013-09-11\/261242.shtml
 
+	public static List<List<String>> getKscx(Context context,String xh,String pw, Handler handler) {
+		List<List<String>> list = new ArrayList<List<String>>();
+		String ss = MRemoteServer.post("tools/kscx", "xh="+xh+"&pw="+pw);
+		//String ss = "{\"msg\":\"SUCCESS\",\"info\":[{\"subname\":\"\\u6bdb\\u6cfd\\u4e1c\\u601d\\u60f3\\u548c\\u4e2d\\u56fd\\u7279\\u8272\\u793e\\u4f1a\\u4e3b\\u4e49\\u7406\\u8bba\\u4f53\\u7cfb\\u6982\\u8bba\\uff08\\u4e0a\\uff09\",\"time\":\"2014\\u5e741\\u67088\\u65e5(14:30-16:30)\",\"area\":\"\\u535a\\u5b66\\u5317\\u697cB413\",\"seat\":\"33\",\"campus\":\"\\u78ec\\u82d1\\u6821\\u533a\"},{\"subname\":\"\\u5927\\u5b66\\u82f1\\u8bed\\uff08\\u4e09\\uff09\",\"time\":\"2014\\u5e741\\u67088\\u65e5(10:20-12:20)\",\"area\":\"\\u535a\\u5b66\\u5317\\u697cB414\",\"seat\":\"16\",\"campus\":\"\\u78ec\\u82d1\\u6821\\u533a\"},{\"subname\":\"\\u9ad8\\u7b49\\u6570\\u5b66A\\uff08\\u4e09\\uff09\",\"time\":\"2014\\u5e741\\u67088\\u65e5(10:20-12:20)\",\"area\":\"\\u535a\\u5b66\\u5317\\u697cB214\",\"seat\":\"21\",\"campus\":\"\\u78ec\\u82d1\\u6821\\u533a\"},{\"subname\":\"\\u5927\\u5b66\\u7269\\u7406B\\uff08\\u4e0b\\uff09\",\"time\":\"2014\\u5e741\\u67089\\u65e5(08:00-10:00)\",\"area\":\"\\u535a\\u5b66\\u5317\\u697cA304\",\"seat\":\"16\",\"campus\":\"\\u78ec\\u82d1\\u6821\\u533a\"},{\"subname\":\"\\u6570\\u5b57\\u903b\\u8f91\",\"time\":\"2014\\u5e741\\u670811\\u65e5(08:00-10:00)\",\"area\":\"\\u535a\\u5b66\\u5317\\u697cB411\",\"seat\":\"13\",\"campus\":\"\\u78ec\\u82d1\\u6821\\u533a\"},{\"subname\":\"\\u79bb\\u6563\\u6570\\u5b66\\uff08\\u4e0a\\uff09\",\"time\":\"2014\\u5e741\\u670812\\u65e5(10:20-12:20)\",\"area\":\"\\u535a\\u5b66\\u5317\\u697cB207\",\"seat\":\"13\",\"campus\":\"\\u78ec\\u82d1\\u6821\\u533a\"}]}";
+		
+		try {
+			JSONObject oo = new JSONObject(ss);
+			if(!oo.getString("msg").equals("SUCCESS")){
+				return null;
+			}
+			JSONArray ary = oo.getJSONArray("info");
+			
+			
+			for (int i = 0; i < ary.length(); i++) {
+
+				list.add(new ArrayList<String>());
+				JSONObject o = ary.getJSONObject(i);
+				list.get(i).add(o.getString("subname"));
+				list.get(i).add(o.getString("time"));
+				list.get(i).add(o.getString("area"));
+				list.get(i).add(o.getString("seat"));
+				list.get(i).add(o.getString("campus"));//4
+
+			}
+
+		} catch (JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return null;
+		}
+
+		return list;
+		
+		
+	}
+	
+	
 	public static List<List<String>> getGongao(Context context, Handler handler) {
 		List<List<String>> list = new ArrayList<List<String>>();
 
@@ -100,11 +138,9 @@ public class MRemoteServer {
 
 	public static void deleteKCBListFromDB(String id) {
 		SQLiteDatabase db;
-		try {
-			db = SQLiteDatabase
-					.openOrCreateDatabase(
-							Environment.getExternalStorageDirectory()
-									+ "/kcb.db", null);
+		try{
+		db = SQLiteDatabase.openOrCreateDatabase(
+				Environment.getExternalStorageDirectory() + "/kcb.db", null);
 		} catch (Exception e) {
 			return;
 		}
@@ -120,17 +156,16 @@ public class MRemoteServer {
 	public static void saveKCBListFromDB(String id, List<Project> list) {
 		SQLiteDatabase db;
 		Cursor cursor;
-
-		try {
-			db = SQLiteDatabase
-					.openOrCreateDatabase(
-							Environment.getExternalStorageDirectory()
-									+ "/kcb.db", null);
-			cursor = db
-					.rawQuery(
-							"select name from sqlite_master where type='table' order by name",
-							null);
-		} catch (Exception e) {
+		Log.i("dddd","save");
+		try{
+		 db = SQLiteDatabase.openOrCreateDatabase(
+				Environment.getExternalStorageDirectory() + "/kcb.db", null);
+		 cursor = db
+				.rawQuery(
+						"select name from sqlite_master where type='table' order by name",
+						null);
+		}catch(Exception e){
+			e.printStackTrace();
 			return;
 		}
 		boolean isExist = false;
@@ -163,16 +198,16 @@ public class MRemoteServer {
 		cursor.close();
 		db.close();
 	}
+	
+	
 
 	public static List<Project> getKCBListFromDB(String id) {
 		SQLiteDatabase db;
 		Cursor cursor;
 		try {
-			db = SQLiteDatabase
-					.openOrCreateDatabase(
-							Environment.getExternalStorageDirectory()
-									+ "/kcb.db", null);
-			cursor = null;
+		  db = SQLiteDatabase.openOrCreateDatabase(
+				Environment.getExternalStorageDirectory() + "/kcb.db", null);
+		  cursor = null;
 		} catch (Exception e) {
 			return null;
 		}
@@ -194,6 +229,8 @@ public class MRemoteServer {
 
 		return list;
 	}
+	
+	
 
 	public static List<Project> getKCBList(String id, String pwd,
 			Context context, Handler handler) {
@@ -216,7 +253,8 @@ public class MRemoteServer {
 		Log.i("year", xn);
 		ss = post("tools/getClass", "xh=" + xh + "&pw=" + pw + "&xn=" + xn
 				+ "&xq=" + xq);
-
+		Log.i("tools/getClass", "xh=" + xh + "&pw=" + pw + "&xn=" + xn
+				+ "&xq=" + xq);
 		if (ss == null) {
 			alert(context, "超时！正在第一次重连..", Toast.LENGTH_LONG, handler);
 			ss = post("tools/getClass", "xh=" + xh + "&pw=" + pw + "&xn=" + xn
@@ -236,23 +274,25 @@ public class MRemoteServer {
 		List<Project> list = new ArrayList<Project>();
 		String subname = "", teacher = "";
 		int t;
-		/*
-		 * int clo[] = { R.drawable.kcb_pro_bc1, R.drawable.kcb_pro_bc2,
-		 * R.drawable.kcb_pro_bc3, R.drawable.kcb_pro_bc4,
-		 * R.drawable.kcb_pro_bc5, R.drawable.kcb_pro_bc6, };
-		 */
-
-		int clo[] = { 0x008cbf, 0x8fa9d6, 0xf0e63b, 0x8cff92, 0xff9999,
-				0xd5d5d5, 0xfff100, };
-
+/*
+		int clo[] = { R.drawable.kcb_pro_bc1, R.drawable.kcb_pro_bc2,
+				R.drawable.kcb_pro_bc3, R.drawable.kcb_pro_bc4,
+				R.drawable.kcb_pro_bc5, R.drawable.kcb_pro_bc6, };
+*/
+		
+		int clo[] = { 0x008cbf, 0x8fa9d6,0xf0e63b,0x8cff92,0xff9999,0xd5d5d5,0xfff100,
+				};
+		
+		
 		try {
 			JSONObject fo = new JSONObject(ss);
 			// 抛出异常
 			if (!fo.getString("msg").equals("SUCCESS")) {
-
+				
 				MRemoteServer.alert(context, "请检查密码是否正确！", 1, handler);
 				return null;
 			}
+			Log.i("year2", xn);
 			JSONArray ary = fo.getJSONArray("kb");
 			for (int i = 0; i < ary.length(); i++) {
 				JSONObject o = ary.getJSONObject(i);
@@ -262,7 +302,7 @@ public class MRemoteServer {
 				JSONObject o2 = o.getJSONObject("info");
 				t = o2.getInt("times");
 				Log.i("hhhh", "111");
-				Log.i("hhhh", t + " nnnn " + subname);
+				 Log.i("hhhh",t+" nnnn "+subname);
 				for (int j = 0; j < t; j++) {
 					JSONArray aryWD = o2.getJSONArray("weekday");
 					JSONArray aryJC = o2.getJSONArray("jc");
@@ -308,7 +348,7 @@ public class MRemoteServer {
 		}
 
 		saveKCBListFromDB(id, list);
-		getKCBListFromDB(id);
+		//getKCBListFromDB(id);
 		return list;
 	}
 
@@ -472,9 +512,10 @@ public class MRemoteServer {
 
 	public static String post(String function, String params) {
 		HttpURLConnection connection = null;
+		Log.i(TAG, "call---->" + doSchool + function + ".php");
 		try {
-			Log.d(TAG, "call---->" + doSchool + function + ".php");
-			Log.d(TAG, "with---->" + params);
+			Log.i(TAG, "call---->" + doSchool + function + ".php");
+			Log.i(TAG, "with---->" + params);
 			URL url = new URL(doSchool + function + ".php");
 			connection = (HttpURLConnection) url.openConnection();
 			connection.setRequestMethod("POST");
@@ -499,14 +540,14 @@ public class MRemoteServer {
 				returnString += temp;
 			}
 			bufferReader.close();
-			Log.d(TAG, "return-->" + returnString);
+			Log.i(TAG, "return-->" + returnString);
 			if (returnString.startsWith("\ufeff")) {
 				returnString = returnString.substring(1);
 			}
 			return returnString;
 		} catch (Exception e) {
 			e.printStackTrace();
-			Log.d(TAG, "error--->");
+			Log.i(TAG, "error--->");
 			return null;
 		} finally {
 			if (connection != null) {

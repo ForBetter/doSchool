@@ -1,5 +1,4 @@
 package us.dobell.doschool.tools;
-
 import java.util.List;
 
 import us.dobell.doschool.R;
@@ -38,7 +37,7 @@ public class ActivityLibMyBook extends Activity {
 		setContentView(R.layout.tools_activity_lib_mybook);
 		left = (ImageButton) findViewById(R.id.tools_top_leftbutton);
 		title = (TextView) findViewById(R.id.tools_top_text);
-		title.setText("我的书籍");
+		title.setText("鎴戠殑涔︾睄");
 		listView = (ListView) findViewById(R.id.tools_activity_lib_mybook_list);
 		handler = new Handler();
 		inflater = LayoutInflater.from(this);
@@ -71,7 +70,7 @@ public class ActivityLibMyBook extends Activity {
 							public void onItemClick(AdapterView<?> arg0,
 									View arg1, int arg2, long arg3) {
 								if (arg2 == data.size()) {
-									text.setText("正在加载");
+									text.setText("姝ｅ湪鍔犺浇");
 									new Thread() {
 										public void run() {
 											data2 = MRemoteServer.getMyBook(
@@ -89,7 +88,7 @@ public class ActivityLibMyBook extends Activity {
 												@Override
 												public void run() {
 													listView.setAdapter(new MyListAdapter());
-													text.setText("更多记录");
+													text.setText("鏇村璁板綍");
 												}
 											});
 
@@ -133,7 +132,7 @@ public class ActivityLibMyBook extends Activity {
 						.findViewById(R.id.tools_lib_mybook_item_text2);
 				t1.setText(data.get(position).get(0));
 				t1.setTextColor(Color.BLUE);
-				t2.setText("归还日期：" + data.get(position).get(4));
+				t2.setText("褰掕繕鏃ユ湡锛� + data.get(position).get(4));
 				return v;
 
 			}
@@ -143,7 +142,7 @@ public class ActivityLibMyBook extends Activity {
 						R.layout.tools_activity_lib_mybook_more, null);
 				text = (TextView) v
 						.findViewById(R.id.tools_lib_mybook_more_text);
-				text.setText("更多记录");
+				text.setText("鏇村璁板綍");
 				return v;
 			}
 			if (position > data.size()) {
@@ -153,7 +152,7 @@ public class ActivityLibMyBook extends Activity {
 						.findViewById(R.id.tools_lib_mybook_item_text2);
 				t1.setText(data2.get(position - data.size() - 1).get(0));
 				t1.setTextColor(Color.BLUE);
-				t2.setText("归还日期："
+				t2.setText("褰掕繕鏃ユ湡锛�
 						+ data2.get(position - data.size() - 1).get(4));
 				return v;
 
